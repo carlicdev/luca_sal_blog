@@ -1,24 +1,17 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React from 'react'
 import Link from 'next/link';
 import { BsTwitter } from 'react-icons/bs'
 
-import { getCategories } from '../services'
 
 const Header = () => {
-    const [categories, setCategories] = useState([]);
-
-    useEffect(() => {
-        getCategories()
-            .then((newCategories) => setCategories(newCategories))
-    }, []);
-
+ 
     return (
         <div className='container mx-auto px-10 mb-8'>
             <div className='border-b w-full inline-block border-cyan-800 py-3'>
                 <div className='md:float-left block mt-2'>
                     <Link href='/'>
-                        <span className='cursor-pointer brand font-bold text-5xl text-cyan-800 uppercase'>
-                            <span className='text-red-800'>Luca</span>Sal
+                        <span className='cursor-pointer brand font-bold text-5xl text-cyan-600 uppercase'>
+                            <span className='text-orange-700'>Luca</span>Sal
                         </span>
                     </Link>
                 </div>
