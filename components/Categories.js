@@ -12,7 +12,7 @@ const Categories = () => {
     }, []);
 
     return (
-        <div className='bg-white shadow-lg md:rounded-lg p-8 mb-8 pb-12'>
+        <div className='text-white bg-gray-800 shadow-lg md:rounded-lg p-8 mb-8 pb-12'>
             <h3 className='text-xl mb-8 font-semibold border-b pb-4'>
                 Categorias
             </h3>
