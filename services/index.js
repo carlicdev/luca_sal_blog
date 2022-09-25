@@ -36,7 +36,7 @@ export const getPosts = async () => {
 
     const result = await request(graphqlAPI, query);
 
-    return result.postsConnection.edges.reverse();
+    return result.postsConnection.edges;
 };
 
 export const getRecentPosts = async () => {
