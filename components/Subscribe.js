@@ -8,7 +8,7 @@ const Subscribe = () => {
     
     const subscribe =  async (email) => {
         const res =  await fetch(`/api/subscribe?email=${email}`)
-        
+        console.log(res.statusText)
         if (res.status == 201) {
             setError(null)
             setSuccess('Por favor revisa tu bandeja de entrada para confirmar tu subscripción.')
