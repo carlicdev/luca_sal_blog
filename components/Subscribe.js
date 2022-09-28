@@ -3,9 +3,19 @@ import React, { useState } from 'react'
 
 const Subscribe = () => {
     const [email, setEmail] = useState('')
+    const [error, setError] = useState(null)
+    const [success, setSuccess] = useState(null)
     
-    const subscribe = (email) => {
-        const res = fetch(`/api/subscribe?email=${email}`)
+    const subscribe =  async (email) => {
+        const res =  await fetch(`/api/subscribe?email=${email}`)
+        
+        if (res.status == 201) {
+            setError(null)
+            setSuccess('Por favor revisa tu bandeja de entrada para confirmar tu subscripción.')
+        } else {
+            setSuccess(null)
+            setError('Tu correo no ha podido ser registrado. Por favor intentalo de nuevo.')
+        }
     }
 
    const handleSubmit = (e) => {
@@ -33,6 +43,12 @@ const Subscribe = () => {
                 suscribirme
             </button>
         </form>
+        {error && (
+            <p className='text-red-500'>{error} </p>
+        )}
+        {success && (
+            <p className='text-green-500'>{success} </p>
+        )}
     </div>
   )
 }
