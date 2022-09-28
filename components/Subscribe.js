@@ -11,7 +11,7 @@ const Subscribe = () => {
         console.log(res.statusText)
         if (res.status == 201) {
             setError(null)
-            setSuccess('Por favor revisa tu bandeja de entrada para confirmar tu subscripción.')
+            setSuccess('Por favor revisa tu bandeja de entrada para confirmar tu suscripción.')
         } else {
             setSuccess(null)
             setError('Tu correo no ha podido ser registrado. Por favor intentalo de nuevo.')
