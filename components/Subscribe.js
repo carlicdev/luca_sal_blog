@@ -26,7 +26,7 @@ const Subscribe = () => {
   return (
     <div className='relative md:rounded-lg bg-gray-700 bg-opacity-60 shadow shadow-slate-600 text-white text-center w-full mx-auto mb-8 p-8'>
         <p className='mt-2 mb-4 text-lg'>
-        Suscríbete para enterarte de los posts mas recientes
+        Suscríbete para enterarte de los posts más recientes
         </p>
         <form onSubmit={handleSubmit}>
             <input
