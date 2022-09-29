@@ -251,5 +251,5 @@ export const getCategoryPost = async (slug) => {
 
   const result = await request(graphqlAPI, query, { slug });
 
-  return result.postsConnection.edges;
+  return result.postsConnection.edges.reverse();
 };
