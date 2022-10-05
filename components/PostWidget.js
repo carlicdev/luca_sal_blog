@@ -20,7 +20,7 @@ const PostWidget = ({categories, slug}) => {
     return (
         <div className='text-white bg-gray-800 shadow-lg md:rounded-lg p-8 mb-8'>
             <h3 className='text-xl mb-8 font-semibold border-b pb-4'>
-                {slug ? 'Relacionados' : 'Lo Mas Reciente'}
+                {slug ? 'Relacionados' : 'Lo Más Reciente'}
             </h3>
             {relatedPosts.map((post) => (
                 <div key={post.title} className='flex items-center w-full mb-4'>
