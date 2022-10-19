@@ -12,4 +12,5 @@ export { default as FeaturedPostCard } from './FeaturedPostCard';
 export { default as Loader } from './Loader';
 export { default as Store } from './Store';
 export { default as Subscribe } from './Subscribe';
-import { default as Brand } from './Brand';
+export { default as Brand } from './Brand';
+export { default as Pagination } from './Pagination';
