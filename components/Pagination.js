@@ -10,12 +10,12 @@ const Pagination = ({totalPosts, postsPerPage, setCurrentPage, currentPage }) =>
 
   return (
     <div className='m-2 p-2 mx-auto flex'>
-      <button
-        type='button'
+      <span
+        className='text-slate-500 cursor-pointer hover:text-cyan-600'
         onClick={() => setCurrentPage(currentPage - 1)}
       >
-        <MdOutlineArrowLeft size={'4em'} className='text-slate-500 cursor-pointer hover:text-cyan-600'/>
-      </button>
+        <MdOutlineArrowLeft size={'4em'} />
+      </span>
       {
         pages.map((page, index) => {
           return (
@@ -33,12 +33,12 @@ const Pagination = ({totalPosts, postsPerPage, setCurrentPage, currentPage }) =>
           )
         })
       }
-      <button
-        type='button'
+      <span
         onClick={() => setCurrentPage(currentPage + 1)}
+        className='text-slate-500 cursor-pointer hover:text-cyan-600'
       >
-        <MdOutlineArrowRight size={'4em'} className='text-slate-500 cursor-pointer hover:text-cyan-600'/>
-      </button>
+        <MdOutlineArrowRight size={'4em'} />
+      </span>
     </div>
   )
 }
