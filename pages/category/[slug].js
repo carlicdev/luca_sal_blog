@@ -11,7 +11,7 @@ const CategoryPost = ({ posts }) => {
 
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage; 
-  const currentPosts = posts.slice(firstPostIndex, lastPostIndex) || [];
+  const currentPosts = posts ? posts.slice(firstPostIndex, lastPostIndex) : [];
 
   if (router.isFallback) {
     return <Loader />;
