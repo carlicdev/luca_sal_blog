@@ -87,6 +87,9 @@ export const getCategories  = async () => {
             categories {
                 name
                 slug
+                posts {
+                  id
+                }
             }
         }
     `
