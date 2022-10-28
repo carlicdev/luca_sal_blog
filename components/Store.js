@@ -3,7 +3,7 @@ import React from 'react';
 const Store = () => {
     return (
         <div className='container text-white font-semibold text-center'>
-            En construcción. mas
+            En construcción. mas 1
         </div>
     )
 }
