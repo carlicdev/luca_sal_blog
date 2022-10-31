@@ -11,7 +11,7 @@ const Header = () => {
             <div className='border-b w-full inline-block border-cyan-800 py-3'>
                 <div className='md:float-left block mt-2'>
                     <Link href='/'>
-                        <span className='flex cursor-pointer brand font-bold text-5xl text-zinc-500 uppercase'>
+                        <span className='flex cursor-pointer brand font-bold text-5xl text-orange-600 uppercase'>
                             {/*}
                             <Image
                                 alt='logo'
