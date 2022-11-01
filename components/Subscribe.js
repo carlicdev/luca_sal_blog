@@ -39,7 +39,7 @@ const Subscribe = () => {
             />
             <button 
                 type='submit'
-                className='rounded shadow-md shadow-slate- hover:bg-red-800 px-6 py-2 mt-4 mb-2 text-white bg-red-700 mx-auto uppercase'>
+                className='rounded shadow-md shadow-slate- hover:bg-orange-700 px-6 py-2 mt-4 mb-2 text-white bg-orange-600 mx-auto uppercase'>
                 suscribirme
             </button>
         </form>
