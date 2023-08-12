@@ -8,7 +8,7 @@ const PostDetail = ({ post }) => {
         if (obj) {
 
           if (obj.href) {
-            modifiedText = (<a key={index} href={obj.href} target={obj.openInNewTab ? '_blank' : null} className="mb-8 text-red-300 font-semibold" >{obj.children[0].text}</a>);
+            modifiedText = (<a key={index} href={obj.href} target={obj.openInNewTab ? '_blank' : null} rel={"noreferrer"} className="mb-8 text-red-300 font-semibold" >{obj.children[0].text}</a>);
           }
 
           if (obj.bold) {
@@ -25,7 +25,7 @@ const PostDetail = ({ post }) => {
         }
     
         switch (type) {
-          
+
           case 'quote':
             return <q key={index} className="text-l text-gray-200 font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</q>;
           case 'heading-three':
