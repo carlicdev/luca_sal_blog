@@ -8,7 +8,7 @@ const PostDetail = ({ post }) => {
         if (obj) {
 
           if (obj.href) {
-            modifiedText = (<a key={index} href={obj.href} target={obj.openInNewTab ? '_blank' : null} rel="noreferrer" className="mb-8 text-red-300 font-semibold" >{obj.children[0].text}</a>);
+            modifiedText = (<a key={index} href={obj.href} target={obj.openInNewTab ? '_blank' : null} rel="noopener noreferrer" className="mb-8 text-red-300 font-semibold" >{obj.children[0].text}</a>);
           }
 
           if (obj.bold) {
