@@ -20,6 +20,8 @@ const PostDetail = ({ post }) => {
         }
     
         switch (type) {
+          case 'link':
+            return <a key={index} className="mb-8 text-blue-200">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</a>;
           case 'quote':
             return <q key={index} className="text-l text-gray-200 font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</q>;
           case 'heading-three':
