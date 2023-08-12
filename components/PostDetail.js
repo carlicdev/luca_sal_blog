@@ -6,6 +6,11 @@ const PostDetail = ({ post }) => {
         let modifiedText = text;
     
         if (obj) {
+
+          if (obj.href) {
+            modifiedText = (<a key={index} href={obj.href} target={obj.openInNewTab ? '_blank' : null} className="mb-8 text-red-300 font-semibold" >{obj.children[0].text}</a>);
+          }
+
           if (obj.bold) {
             modifiedText = (<b key={index}>{text}</b>);
           }
@@ -20,8 +25,7 @@ const PostDetail = ({ post }) => {
         }
     
         switch (type) {
-          case 'link':
-            return <a key={index} className="mb-8 text-blue-200">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</a>;
+          
           case 'quote':
             return <q key={index} className="text-l text-gray-200 font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</q>;
           case 'heading-three':
@@ -67,9 +71,10 @@ const PostDetail = ({ post }) => {
                 </div>
                 <h1 className="mb-8 text-3xl text-orange-600 font-semibold">{post.title}</h1>
                 {post.content.raw.children.map((typeObj, index) => {
-                    const children = typeObj.children.map((item, itemIndex) => getContentFragment(itemIndex, item.text, item))
 
-                    return getContentFragment(index, children, typeObj, typeObj.type)
+                    const children = typeObj.children.map((item, itemIndex) =>  getContentFragment(itemIndex, item.text, item,))
+
+                    return getContentFragment(index, children, typeObj, typeObj.type, )
                 })}
             </div>
         </div>
